@@ -1,7 +1,7 @@
 <plugin name='typescript' version='0.3' grailsVersion='2.2 &gt; *'>
   <author>Dima Ovcharenko</author>
   <authorEmail>o.snich@gmail.com</authorEmail>
-  <title>Typescript Plugin</title>
+  <title>TypeScript resource plugin</title>
   <description>This plugin can help you manage typescript code in your grails application.
 </description>
   <documentation>http://grails.org/plugin/typescript</documentation>
