@@ -13,9 +13,9 @@ This plugin can help you compile typescript source in your grails application.
 
 <h2>Instalation:</h2>
 
-	1. <a href="http://nodejs.org/">node.js</a>
-	2. <a href="http://nodejs.org/download/">npm</a>
-	3. <a href="http://www.typescriptlang.org/#Download">typescript</a>
+1. <a href="http://nodejs.org/">node.js</a>
+2. <a href="http://nodejs.org/download/">npm</a>
+3. <a href="http://www.typescriptlang.org/#Download">typescript</a>
 
 Check typescript:
 
