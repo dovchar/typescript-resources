@@ -1,33 +1,32 @@
-TypeScript resource plugin 
+<h1>TypeScript resource plugin</h1>
+
 This plugin can help you compile typescript source in your grails application. 
 
-This plugin used:
+<h2>Dependency:</h2>
 
 	nodejs >= v0.8.10
 	npm >= 1.1.60
 	typescript >= 0.8.3.0
 	grails >= 2.2.0
 	grails resources >= 1.1.0 
+	typescript resources >= 0.3
 
-Dependency :
+<h2>Instalation:</h2>
 
-	runtime ":typescript:0.3"
-
-Instalation:
-
-	1. node.js (http://nodejs.org/)
-	2. npm (http://nodejs.org/download/)
-	3. typescript (http://www.typescriptlang.org/#Download)
+	1. <a href="http://nodejs.org/">node.js</a>
+	2. <a href="http://nodejs.org/download/">npm</a>
+	3. <a href="http://www.typescriptlang.org/#Download">typescript</a>
 
 Check typescript:
-	
+
 	tsc -v //0.8.x
 
 Create grails application:
 	
 	grails create-app [APP_NAME]
  
-Configure:
+<h2>Configure:</h2>
+
 Open /grails-app/conf/BuildConfig.groovy. In plugins hash after runtime ":resources:1.1.6" add 		
 
 	runtime ":typescript:0.3"
@@ -36,7 +35,8 @@ And start your application:
 
 	grails run-app 
 
-Start using: 
+<h2>Using:</h2>
+ 
 Open /grails-app/conf/ApplicationResources.groovy. Put this lines in to it:
 
 	modules = {
@@ -62,17 +62,23 @@ app.ts example:
         	}
 			}
 	}
+	
 	var greeter = new Sayings.Greeter("world");
 	var button = document.createElement('button');
+	
 	button.innerText = "Say Hello";
+	
 	button.onclick = function() {
     	alert(greeter.greet());
 	};
+	
 	document.body.appendChild(button);
 
-And when you will review your html source in browser you could see <script src="/js/app.js" />
+And when you will review your html source in browser you could see 
 
-app.js source:
+	<script src="/js/app.js" />
+
+app.js file:
 
 	var Sayings;
 	(function (Sayings) {
@@ -96,8 +102,13 @@ app.js source:
 	document.body.appendChild(button);  
 
 Contributing
+
 Fork it
+
 Create your feature branch (git checkout -b my-new-feature)
+
 Commit your changes (git commit -am 'Added some feature')
+
 Push to the branch (git push origin my-new-feature)
+
 Create new Pull Request
