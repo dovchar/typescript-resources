@@ -25,7 +25,7 @@ This plugin can help you manage typescript code in your grails application.
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-    def license = "APACHE"
+    def license = "MIT"
 
     // Details of company behind the plugin (if there is one)
 //    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]

@@ -2,7 +2,7 @@
 
 This plugin can help you compile typescript source in your grails application. 
 
-<h2>Dependency:</h2>
+<h3>Dependency:</h3>
 
 	nodejs >= v0.8.10
 	npm >= 1.1.60
@@ -11,7 +11,7 @@ This plugin can help you compile typescript source in your grails application.
 	grails resources >= 1.1.0 
 	typescript resources >= 0.3
 
-<h2>Instalation:</h2>
+<h3>Instalation:</h3>
 
 1. <a href="http://nodejs.org/">node.js</a>
 2. <a href="http://nodejs.org/download/">npm</a>
@@ -25,7 +25,7 @@ Create grails application:
 	
 	grails create-app [APP_NAME]
  
-<h2>Configure:</h2>
+<h3>Configure:</h3>
 
 Open /grails-app/conf/BuildConfig.groovy. In plugins hash after runtime ":resources:1.1.6" add 		
 
@@ -35,7 +35,7 @@ And start your application:
 
 	grails run-app 
 
-<h2>Using:</h2>
+<h3>Using:</h3>
  
 Open /grails-app/conf/ApplicationResources.groovy. Put this lines in to it:
 
@@ -104,11 +104,10 @@ app.js file:
 Contributing
 
 Fork it
-
 Create your feature branch (git checkout -b my-new-feature)
-
 Commit your changes (git commit -am 'Added some feature')
-
 Push to the branch (git push origin my-new-feature)
-
 Create new Pull Request
+
+<h3>License</h3>
+Copyright (c) 2013 Dmytro Ovcharenko Licensed under the MIT license.
