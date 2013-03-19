@@ -1,19 +1,22 @@
 class TypescriptGrailsPlugin {
     // the plugin version
-    def version = "0.1"
+    def version = "0.3"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.2 > *"
     // resources that are excluded from plugin packaging
+    def dependsOn = [resources: '1.0 > *']
+    def loadAfter = ['resources']
     def pluginExcludes = [
-        "grails-app/views/error.gsp"
+        "grails-app/views/error.gsp",
+        "web-app/js/**/*.*"
     ]
 
     // TODO Fill in these fields
     def title = "Typescript Plugin" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author = "Dima Ovcharenko"
+    def authorEmail = "o.snich@gmail.com"
     def description = '''\
-Brief summary/description of the plugin.
+This plugin can help you manage typescript code in your grails application.
 '''
 
     // URL to the plugin's documentation
@@ -22,7 +25,7 @@ Brief summary/description of the plugin.
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "APACHE"
 
     // Details of company behind the plugin (if there is one)
 //    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
@@ -34,7 +37,7 @@ Brief summary/description of the plugin.
 //    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
 
     // Online location of the plugin's browseable source code.
-//    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
+    def scm = [ url: "http://github.com/dovchar/typescript-resources" ]
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before
