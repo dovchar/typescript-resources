@@ -4,21 +4,19 @@ import org.grails.plugin.resource.mapper.MapperPhase
 
 class TypeScriptResourceMapper {
 
-	static phase = MapperPhase.GENERATION
+  static phase = MapperPhase.GENERATION
 
   static defaultExcludes = ['**/*.js']
   static defaultIncludes = ['**/*.ts']
 
   def map(resource, config) {
-  	File originalFile = resource.processedFile
+    File originalFile = resource.processedFile
     def originalFileName = resource.processedFile.name
     def parentFileName = resource.processedFile.parentFile
-  	
-  	def command = "tsc ${originalFile}"
-		def proc = command.execute()
-		proc.waitFor()    
 
-    resource.processedFile = new File("${resource.processedFile.parentFile}/${originalFileName.replaceAll('ts', 'js')}")
+    "tsc ${originalFile}".execute().waitFor()
+
+    resource.processedFile = new File(resource.processedFile.parentFile, "${originalFileName.replaceAll('ts', 'js')}")
     resource.sourceUrlExtension = 'js'
     resource.updateActualUrlFromProcessedFile()
   }
