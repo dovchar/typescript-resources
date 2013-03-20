@@ -9,7 +9,7 @@ This plugin can help you compile typescript source in your grails application.
 	typescript >= 0.8.3.0
 	grails >= 2.2.0
 	grails resources >= 1.1.0
-	typescript resources >= 0.3
+	typescript resources >= 0.3.7
 
 <h3>Instalation:</h3>
 
@@ -29,7 +29,7 @@ Create grails application:
 
 Open /grails-app/conf/BuildConfig.groovy. In plugins hash after runtime ":resources:1.1.6" add
 
-	runtime ":typescript:0.3"
+	runtime ":typescript:0.3.7"
 
 And start your application:
 
