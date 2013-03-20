@@ -1,6 +1,6 @@
 <h1>TypeScript resource plugin</h1>
 
-This plugin can help you compile typescript source in your grails application. 
+This plugin can help you compile typescript source in your grails application.
 
 <h3>Dependency:</h3>
 
@@ -8,7 +8,7 @@ This plugin can help you compile typescript source in your grails application.
 	npm >= 1.1.60
 	typescript >= 0.8.3.0
 	grails >= 2.2.0
-	grails resources >= 1.1.0 
+	grails resources >= 1.1.0
 	typescript resources >= 0.3
 
 <h3>Instalation:</h3>
@@ -22,21 +22,21 @@ Check typescript:
 	tsc -v //0.8.x
 
 Create grails application:
-	
+
 	grails create-app [APP_NAME]
- 
+
 <h3>Configure:</h3>
 
-Open /grails-app/conf/BuildConfig.groovy. In plugins hash after runtime ":resources:1.1.6" add 		
+Open /grails-app/conf/BuildConfig.groovy. In plugins hash after runtime ":resources:1.1.6" add
 
 	runtime ":typescript:0.3"
 
-And start your application: 
+And start your application:
 
-	grails run-app 
+	grails run-app
 
 <h3>Using:</h3>
- 
+
 Open /grails-app/conf/ApplicationResources.groovy. Put this lines in to it:
 
 	modules = {
@@ -50,7 +50,7 @@ Open /grails-app/conf/ApplicationResources.groovy. Put this lines in to it:
 After go to your web-app/js folder and create app.ts and main.ts
 
 app.ts example:
-	
+
 	module Sayings {
     	export class Greeter {
         	greeting: string;
@@ -62,19 +62,19 @@ app.ts example:
         	}
 			}
 	}
-	
+
 	var greeter = new Sayings.Greeter("world");
 	var button = document.createElement('button');
-	
+
 	button.innerText = "Say Hello";
-	
+
 	button.onclick = function() {
     	alert(greeter.greet());
 	};
-	
+
 	document.body.appendChild(button);
 
-And when you will review your html source in browser you could see 
+And when you will review your html source in browser you could see
 
 	<script src="/js/app.js" />
 
@@ -91,7 +91,7 @@ app.js file:
         };
         return Greeter;
     })();
-    Sayings.Greeter = Greeter;    
+    Sayings.Greeter = Greeter;
 	})(Sayings || (Sayings = {}));
 	var greeter = new Sayings.Greeter("world");
 	var button = document.createElement('button');
@@ -99,7 +99,7 @@ app.js file:
 	button.onclick = function () {
     	alert(greeter.greet());
 	};
-	document.body.appendChild(button);  
+	document.body.appendChild(button);
 
 Contributing
 
