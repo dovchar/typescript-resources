@@ -14,10 +14,14 @@ class TypeScriptResourceMapper {
     def originalFileName = resource.processedFile.name
     def parentFileName = resource.processedFile.parentFile
 
-    "tsc ${originalFile}".execute().waitFor()
+    def proc = "tsc ${originalFile}".execute()
+    proc.waitFor()        
+
+    println "stderr: ${proc.err.text}"
 
     resource.processedFile = new File(resource.processedFile.parentFile, "${originalFileName.replaceAll('ts', 'js')}")
     resource.sourceUrlExtension = 'js'
+    resource.contentType = 'text/javascript'
     resource.updateActualUrlFromProcessedFile()
   }
 }
