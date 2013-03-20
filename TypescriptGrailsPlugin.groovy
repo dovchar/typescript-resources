@@ -8,6 +8,6 @@ class TypescriptGrailsPlugin {
     def description = 'Helps you manage typescript code in your Grails application.'
     def documentation = "http://grails.org/plugin/typescript"
     def license = "MIT"
-    def issueManagement = [system: "GitHub", url: "http://github.com/dovchar/typescript-resources/issues']
+    def issueManagement = [system: "GitHub", url: "http://github.com/dovchar/typescript-resources/issues"]
     def scm = [url: "http://github.com/dovchar/typescript-resources"]
 }
