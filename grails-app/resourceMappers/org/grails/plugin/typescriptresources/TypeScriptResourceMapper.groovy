@@ -15,9 +15,15 @@ class TypeScriptResourceMapper {
     def parentFileName = resource.processedFile.parentFile
 
     def proc = "tsc ${originalFile}".execute()
-    proc.waitFor()        
+    proc.waitFor() 
 
-    println "stderr: ${proc.err.text}"
+    def typescriptError = proc.err.text
+    
+    if(typescriptError.size() > 0) {
+      println "typescript error: ${typescriptError}" 
+    } else {
+      println "info: typescript seccessfully compiled"
+    }
 
     resource.processedFile = new File(resource.processedFile.parentFile, "${originalFileName.replaceAll('ts', 'js')}")
     resource.sourceUrlExtension = 'js'
