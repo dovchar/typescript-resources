@@ -29,7 +29,7 @@ Create grails application:
 
 Open /grails-app/conf/BuildConfig.groovy. In plugins hash after runtime ":resources:1.1.6" add
 
-	runtime ":typescript:0.3.7"
+	runtime ":typescript:0.3.9"
 
 And start your application:
 
