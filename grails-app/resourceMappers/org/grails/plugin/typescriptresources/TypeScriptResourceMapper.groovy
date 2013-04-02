@@ -20,9 +20,9 @@ class TypeScriptResourceMapper {
     def typescriptError = proc.err.text
     
     if(typescriptError.size() > 0) {
-      println "typescript error: ${typescriptError}" 
+      log.error "typescript error: ${typescriptError}" 
     } else {
-      println "info: typescript seccessfully compiled"
+      println "${originalFileName} seccessfully compiled"
     }
 
     resource.processedFile = new File(resource.processedFile.parentFile, "${originalFileName.replaceAll('ts', 'js')}")

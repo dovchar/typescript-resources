@@ -3,4 +3,5 @@
 /grails-*.zip
 /plugin.xml
 .settings
+.gitignore
 web-app
