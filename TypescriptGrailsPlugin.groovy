@@ -1,5 +1,5 @@
 class TypescriptGrailsPlugin {
-    def version = "0.4"
+    def version = "0.4.1"
     def grailsVersion = "2.0 > *"
     def dependsOn = [resources:'1.0 > *']
     def loadAfter = ['resources']
