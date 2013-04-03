@@ -6,7 +6,6 @@ class TypeScriptResourceMapper {
 
   static phase = MapperPhase.GENERATION
 
-  static defaultExcludes = ['**/*.js']
   static defaultIncludes = ['**/*.ts']
 
   def map(resource, config) {

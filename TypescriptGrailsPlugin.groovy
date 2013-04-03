@@ -1,5 +1,5 @@
 class TypescriptGrailsPlugin {
-    def version = "0.3.9"
+    def version = "0.4"
     def grailsVersion = "2.0 > *"
     def loadAfter = ['resources']
     def title = "TypeScript resource plugin"
